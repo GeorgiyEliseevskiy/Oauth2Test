@@ -51,7 +51,7 @@ public class ClientService implements RegisteredClientRepository {
         var client = clientRepository.findById(Integer.parseInt(id));
         return client.map(Client::from)
                 .orElseThrow(
-                        () -> new RuntimeException("pizda")
+                        () -> new RuntimeException("error")
                 );
 
     }
@@ -61,7 +61,7 @@ public class ClientService implements RegisteredClientRepository {
         var client = clientRepository.findByClientId(clientId);
         return client.map(Client::from)
                 .orElseThrow(
-                        () -> new RuntimeException("pizda")
+                        () -> new RuntimeException("error")
                 );
 
     }
